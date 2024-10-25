@@ -1,6 +1,5 @@
 import express from "express";
 import todosRouter from "./routes/todos.js";  // Correct path to todos.js
-import testRouter from "./routes/test.js";    // Correct path to test.js
 import connect from "./database/mongodb-connect.js"; // Correct path to mongodb-connect.js
 import usersRouter from "./routes/users.js"; // Correct path to users.js
 
@@ -17,7 +16,7 @@ app.use(express.static("public"));
 
 
 app.use("/api", usersRouter); // Correct path to usersRouter
-app.use("api",todosRouter); // Correct path to todosRouter
+app.use("/api",todosRouter); // Correct path to todosRouter
 
 
 //attempted to connect to the database

@@ -5,8 +5,6 @@ import User from "../models/user.js";
 Router.post("/users", async (req, res) => {
 const user = req.body;
 
-
-
     //TODO: create a new user to database
     const result = await User.create(user)
     return res.status(201).json(result);
